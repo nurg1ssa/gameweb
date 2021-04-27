@@ -1,0 +1,13 @@
+<div>
+  <h1 class="header">TICTACTOE</h1>
+  <div class="header2">
+    <button (click)="newGame()">New Game</button>
+    <h2>Current player: {{player}} </h2>
+  </div>
+  <h2 class="winner">Winner:{{winner}}</h2>
+  <main>
+      <app-square [ngClass]="{'disable': winner =='X','disable1': winner == 'O'}" *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)">
+
+      </app-square>
+  </main>
+</div>

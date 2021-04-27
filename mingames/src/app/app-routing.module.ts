@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {TictactoeComponent} from "./components/tictactoe/tictactoe.component";
+import {MainComponent} from "./components/main/main.component";
+import {ForOneComponent} from "./components/for-one/for-one.component";
+import {ForTwoComponent} from "./components/for-two/for-two.component";
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'tictac' ,component:TictactoeComponent},
+  {path: 'forTwo' ,component: ForTwoComponent},
+  {path:'forOne' ,component: ForOneComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

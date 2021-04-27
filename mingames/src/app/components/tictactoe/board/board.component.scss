@@ -1,0 +1,34 @@
+
+main{
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 0px;
+}
+.header{
+  text-align: center;
+}
+.header2{
+  width: 100%;
+  height: 2rem;
+}
+.header2 button{
+  display: inline-block;
+  float: right;
+  background-color: lightgreen;
+  color:white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.winner{
+  margin: 0;
+}
+app-square {
+  border: 1px black solid;
+  height: 200px;
+}
+.disable{
+  pointer-events: none;
+}
+.disable1{
+  pointer-events: none;
+}
