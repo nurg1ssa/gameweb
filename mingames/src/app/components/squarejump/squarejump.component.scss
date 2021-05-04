@@ -1,18 +1,23 @@
+.squarecatch{
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
 #game{
   width: 500px;
   height: 200px;
   border: 1px solid black;
 }
 #character {
-  width: 30px;
-  height: 50px;
+  width: 40px;
+  height: 200px;
   background-color: red;
   position: relative;
-  top: 150px;
+  top: -50;
+  left: 40px;
 }
-.animate{
-  animation: jump 500ms;
-}
+
 @keyframes  jump{
   0%{top: 150px}
   30%{top: 100px}
@@ -24,11 +29,24 @@
   height: 20px;
   background-color: blue;
   position: relative;
-  top: 130px;
+  top: -20px;
   left: 480px;
-  animation: block 2s infinite linear;
+  animation-duration: 10s;
+}
+.animation{
+  animation: block infinite linear;
+}
+.noanimation{
+  animation: block none;
 }
 @keyframes block{
   0%{left:480px;}
-  100%{left: -40px;}
+  100%{left: -1px;}
+}
+.newgame{
+  display: inline-block;
+  background-color: lightgreen;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
 }

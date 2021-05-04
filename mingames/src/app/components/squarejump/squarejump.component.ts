@@ -9,37 +9,39 @@ import {ElementRef , ViewChild,AfterViewInit} from "@angular/core";
 export class SquarejumpComponent implements OnInit{
   click!: boolean;
   i!: number;
-  end!: boolean;
+  end: boolean=true;
   score: number=0;
+  num: number=3000;
   constructor() {
   }
   ngOnInit(){
-    this.onGame();
+    this.checkDead();
   }
   @ViewChild('character')
   character!: ElementRef;
   @ViewChild('block')
   block!: ElementRef;
-  jump() {
-    if (this.click == false) {
-      this.click = !this.click;
-    }
-    setTimeout(() => {
-      this.click = !this.click;
-    }, 500)
-  }
+  @ViewChild('animation')
+  animation!: ElementRef;
   onGame(){
 
   }
+  newGame(){
+    this.score = 0;
+    this.end =true;
+    this.num = 3000;
+    this.block.nativeElement.style.setProperty('animation-duration',this.num + 'ms');
+  }
   checkDead(){
-
-    if (this.block.nativeElement.offsetLeft<35 && this.block.nativeElement.offsetLeft>0 &&
-    this.character.nativeElement.offsetTop>=130){
-      this.score= this.score+1;
-
-      return this.score
+    if (this.block.nativeElement.offsetLeft<690 && this.block.nativeElement.offsetLeft>0){
+      this.num -= 1;
+      this.score = 3000 - this.num;
+      this.end = true;
+      this.block.nativeElement.style.setProperty('animation-duration', this.num + 'ms')
     }
-      return this.score;
+    else {
+      this.end = false;
+    }
   }
 }
 
