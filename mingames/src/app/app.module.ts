@@ -10,6 +10,7 @@ import { BoardComponent } from './components/tictactoe/board/board.component';
 import { ForOneComponent } from './components/for-one/for-one.component';
 import { ForTwoComponent } from './components/for-two/for-two.component';
 import { SquarejumpComponent } from './components/squarejump/squarejump.component';
+import { SquareslideComponent } from './components/squareslide/squareslide.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SquarejumpComponent } from './components/squarejump/squarejump.componen
     BoardComponent,
     ForOneComponent,
     ForTwoComponent,
-    SquarejumpComponent
+    SquarejumpComponent,
+    SquareslideComponent
   ],
   imports: [
     BrowserModule,

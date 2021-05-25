@@ -1,7 +1,7 @@
 
 main{
   display: grid;
-  grid-template-columns: 200px 200px 200px;
+  grid-template-columns: 120px 120px 120px;
   grid-gap: 0px;
 }
 .header{
@@ -24,7 +24,7 @@ main{
 }
 app-square {
   border: 1px black solid;
-  height: 200px;
+  height: 120px;
 }
 .disable{
   pointer-events: none;

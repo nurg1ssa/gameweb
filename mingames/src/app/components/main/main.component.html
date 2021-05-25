@@ -1,8 +1,11 @@
 <div class="navbar">
-  <nav>
-    <button (click)="forOne()">For one player</button>
-    <button (click)="forTwo()">For two players</button>
-  </nav>
+  <ul>
+    <li><a class="active">For One</a></li>
+    <li><a [routerLink]="['/squarejump']">Square Catch</a></li>
+    <li><a [routerLink]="['/squareslide']">Square Slide</a></li>
+    <li><a class="active">For Two</a></li>
+    <li><a [routerLink]="['/tictac']">TicTacToe</a></li>
+  </ul>
 </div>
 
 

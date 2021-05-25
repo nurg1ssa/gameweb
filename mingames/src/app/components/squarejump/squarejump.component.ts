@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ElementRef , ViewChild,AfterViewInit} from "@angular/core";
-
+import {ElementRef , ViewChild, AfterViewInit } from "@angular/core";
 @Component({
   selector: 'app-squarejump',
   templateUrl: './squarejump.component.html',
