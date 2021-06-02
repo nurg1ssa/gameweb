@@ -23,10 +23,17 @@
   background-color: black;
   display: inline-block;
   position: relative;
-  animation: block infinite linear;
-  animation-duration: 1s;
+  top: 0px;
+  left: 0px;
+  animation-duration: 0s;
 }
 
+.animation{
+  animation: block infinite linear;
+}
+.noanimation{
+  animation: block none;
+}
 @keyframes block {
   0%{top:-50px;}
   100%{top:500px;}
@@ -35,14 +42,14 @@
   width: 500px;
   height: 100px;
   margin: auto;
-  background-color: lightblue;
+  animation: change-bg 10s ease infinite;
   z-index: 1;
 }
 #top{
   width: 500px;
   height: 50px;
   margin: auto;
-  background-color: lightblue;
+  animation: change-bg 10s ease infinite;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -53,4 +60,24 @@
   color: white;
   font-size: 20px;
   font-weight: 600;
+}
+.disable{
+  pointer-events: none;
+}
+@keyframes change-bg {
+  0%{
+    background-color: lightblue;
+  }
+  25%{
+    background-color: lightgreen;
+  }
+  50%{
+    background-color: lightcoral;
+  }
+  75%{
+    background-color: lightsalmon;
+  }
+  100%{
+    background-color: lightblue;
+  }
 }

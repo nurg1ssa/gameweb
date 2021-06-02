@@ -15,10 +15,4 @@ export class MainComponent implements OnInit {
   tictac(){
     this.router.navigate(['/tictac']);
   }
-  forOne(){
-    this.router.navigate(['forOne']);
-  }
-  forTwo(){
-    this.router.navigate(['forTwo']);
-  }
 }

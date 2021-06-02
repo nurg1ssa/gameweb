@@ -1,6 +1,6 @@
 <div class="squarecatch">
   <h2>Square catch</h2>
-  <button class="newgame" (click)="newGame()">New Game</button>
+  <button class="newgame" (click)="newGame()" [ngClass]="{'disable': end== true}">New Game</button>
   <h3 style="display: inline-block">Score: {{score}}</h3>
   <button (click)="checkDead()">Catch</button>
   <div id="game">

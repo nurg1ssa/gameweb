@@ -1,5 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {ElementRef, ViewChild , AfterViewInit} from "@angular/core";
+import {animation} from "@angular/animations";
 
 @Component({
   selector: 'app-squareslide',
@@ -13,6 +14,7 @@ export class SquareslideComponent implements OnInit {
   count: number=0;
   loc: number = 100;
   num: number = 2000;
+  end: boolean=false  ;
   @ViewChild('character') character!: ElementRef;
   @ViewChild('block') block!: ElementRef;
 
@@ -20,13 +22,14 @@ export class SquareslideComponent implements OnInit {
     setInterval(()=>{
       if(this.character.nativeElement.offsetLeft == this.block.nativeElement.offsetLeft &&
         this.block.nativeElement.offsetTop<500 && this.block.nativeElement.offsetTop>420){
-        this.block.nativeElement.style.setProperty('animation', 'none');
+        this.end = false;
       }
     },1)
   }
   newGame() {
     this.count = 0;
-    
+    this.end = true;
+    this.block.nativeElement.style.setProperty('animation-duration',3 +'s')
   }
   moveLeft() {
     if (this.loc > 0) {

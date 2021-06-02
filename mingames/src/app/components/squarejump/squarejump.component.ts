@@ -8,7 +8,7 @@ import {ElementRef , ViewChild, AfterViewInit } from "@angular/core";
 export class SquarejumpComponent implements OnInit{
   click!: boolean;
   i!: number;
-  end: boolean=true;
+  end: boolean=false;
   score: number=0;
   num: number=3000;
   constructor() {

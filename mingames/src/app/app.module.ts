@@ -7,10 +7,10 @@ import { MainComponent } from './components/main/main.component';
 import { TictactoeComponent } from './components/tictactoe/tictactoe.component';
 import { SquareComponent } from './components/tictactoe/square/square.component';
 import { BoardComponent } from './components/tictactoe/board/board.component';
-import { ForOneComponent } from './components/for-one/for-one.component';
-import { ForTwoComponent } from './components/for-two/for-two.component';
 import { SquarejumpComponent } from './components/squarejump/squarejump.component';
 import { SquareslideComponent } from './components/squareslide/squareslide.component';
+import { BlockSliderComponent } from './components/block-slider/block-slider.component';
+
 
 @NgModule({
   declarations: [
@@ -19,10 +19,9 @@ import { SquareslideComponent } from './components/squareslide/squareslide.compo
     TictactoeComponent,
     SquareComponent,
     BoardComponent,
-    ForOneComponent,
-    ForTwoComponent,
     SquarejumpComponent,
-    SquareslideComponent
+    SquareslideComponent,
+    BlockSliderComponent,
   ],
   imports: [
     BrowserModule,

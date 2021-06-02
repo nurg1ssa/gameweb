@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ForTwoComponent } from './for-two.component';
+import { BlockSliderComponent } from './block-slider.component';
 
-describe('ForTwoComponent', () => {
-  let component: ForTwoComponent;
-  let fixture: ComponentFixture<ForTwoComponent>;
+describe('BlockSliderComponent', () => {
+  let component: BlockSliderComponent;
+  let fixture: ComponentFixture<BlockSliderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForTwoComponent ]
+      declarations: [ BlockSliderComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ForTwoComponent);
+    fixture = TestBed.createComponent(BlockSliderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
