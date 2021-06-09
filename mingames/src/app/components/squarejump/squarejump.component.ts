@@ -10,7 +10,7 @@ export class SquarejumpComponent implements OnInit{
   i!: number;
   end: boolean=false;
   score: number=0;
-  num: number=3000;
+  num: number=1000;
   constructor() {
   }
   ngOnInit(){
@@ -28,13 +28,13 @@ export class SquarejumpComponent implements OnInit{
   newGame(){
     this.score = 0;
     this.end =true;
-    this.num = 3000;
+    this.num = 1000;
     this.block.nativeElement.style.setProperty('animation-duration',this.num + 'ms');
   }
   checkDead(){
-    if (this.block.nativeElement.offsetLeft<690 && this.block.nativeElement.offsetLeft>0){
+    if (this.block.nativeElement.offsetLeft<450 && this.block.nativeElement.offsetLeft>0){
       this.num -= 1;
-      this.score = 3000 - this.num;
+      this.score = 1000 - this.num;
       this.end = true;
       this.block.nativeElement.style.setProperty('animation-duration', this.num + 'ms')
     }
