@@ -1,2 +1,2 @@
 # gameweb
- website with games 
+ website with mini games 
