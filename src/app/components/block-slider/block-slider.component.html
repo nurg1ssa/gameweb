@@ -1,4 +1,8 @@
-<div>
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <div (click)="startGame()" class="start" style="background-color: blue;" *ngIf="!started; else emptyBox">Start Game</div>
+  <ng-template #emptyBox>
+    <div class="start" style="background-color: gray;">Game is started</div>
+  </ng-template>
   <div id="game" #game></div>
   <button id="btn" (click)="check(num)">Stop it</button>
 </div>

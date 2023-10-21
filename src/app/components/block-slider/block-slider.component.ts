@@ -11,23 +11,31 @@ export class BlockSliderComponent implements OnInit, AfterViewInit {
   num: number = 1;
   end: boolean =false;
   var: number=400;
+  started: boolean = false
   constructor(private renderer: Renderer2) {
   }
 
   @ViewChild('game')
   game!: ElementRef;
 
+
   ngOnInit() {
   }
 
   ngAfterViewInit() {
+
+  }
+
+  startGame(){
     for (var i = 25; i > 0; i--) {
       const slider: HTMLDivElement = this.renderer.createElement('div');
       slider.setAttribute("class", "slider animate");
       slider.setAttribute("id", "slider" + i);
       this.renderer.appendChild(this.game.nativeElement, slider);
     }
+    this.started = true
   }
+
 
   check(slider: number) {
     var sliderCurrent = document.getElementById("slider" + slider);
@@ -50,6 +58,7 @@ export class BlockSliderComponent implements OnInit, AfterViewInit {
           var score = "Score: "+ (slider-1);
           alert(score);
           location.reload();
+          this.started = false
         }
         if (difference > 0) {
           num = num + absDifference;
@@ -66,5 +75,6 @@ export class BlockSliderComponent implements OnInit, AfterViewInit {
       }
       this.num = this.num + 1;
     }
+
 }
 

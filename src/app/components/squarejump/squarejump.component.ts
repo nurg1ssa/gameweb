@@ -22,15 +22,14 @@ export class SquarejumpComponent implements OnInit{
   block!: ElementRef;
   @ViewChild('animation')
   animation!: ElementRef;
-  onGame(){
 
-  }
   newGame(){
     this.score = 0;
     this.end =true;
     this.num = 1000;
     this.block.nativeElement.style.setProperty('animation-duration',this.num + 'ms');
   }
+
   checkDead(){
     if (this.block.nativeElement.offsetLeft<450 && this.block.nativeElement.offsetLeft>0){
       this.num -= 1;
