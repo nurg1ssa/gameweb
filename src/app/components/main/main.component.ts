@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import  { Router } from '@angular/router';
+import  { Router, NavigationEnd } from '@angular/router';
 
 
 @Component({
@@ -8,7 +8,16 @@ import  { Router } from '@angular/router';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  constructor(public router: Router) { }
+  currentRoute!: string; 
+  constructor(public router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        // Update the currentRoute variable with the current route
+        this.currentRoute = event.url;
+        console.log('Current Route:', this.currentRoute);
+      }
+    });
+   }
 
   ngOnInit(): void {
   }

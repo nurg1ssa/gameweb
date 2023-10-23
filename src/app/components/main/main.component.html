@@ -1,14 +1,18 @@
 <div>
   <ul>
     <li><a class="active">For One</a></li>
-    <li><a [routerLink]="['/towerBuilder']">Tower Builder</a></li>
-    <li><a [routerLink]="['/squareSlide']">Square Slide</a></li>
-    <li><a [routerLink]="['/squareCatch']">Square Catch</a></li>
+    <li [ngClass]="{'picked': currentRoute == '/towerBuilder'}">
+      <a [routerLink]="['/towerBuilder']" [ngStyle]="{ 'color': currentRoute == '/towerBuilder'? 'white': 'black' }">Tower Builder</a>
+    </li>
+    <li [ngClass]="{'picked': currentRoute == '/squareSlide'}">
+      <a [routerLink]="['/squareSlide']" [ngStyle]="{ 'color': currentRoute == '/squareSlide'? 'white': 'black' }">Square Slide</a>
+    </li>
+    <li [ngClass]="{'picked': currentRoute == '/squareCatch'}">
+      <a [routerLink]="['/squareCatch']" [ngStyle]="{ 'color': currentRoute == '/squareCatch'? 'white': 'black' }">Square Catch</a>
+    </li>
     <li><a class="active">For Two</a></li>
-    <li><a [routerLink]="['/tictac']">TicTacToe</a></li>
+    <li [ngClass]="{'picked': currentRoute == '/tictac'}">
+      <a [routerLink]="['/tictac']" [ngStyle]="{ 'color': currentRoute == '/tictac'? 'white': 'black' }">TicTacToe</a>
+    </li>
   </ul>
 </div>
-
-
-
-
