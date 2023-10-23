@@ -1,24 +1,4 @@
-/*.navbar{
-  width: 100%;
-  height: 8vh;
-  background-color: coral;
-  display: inline-block;
-}
-.but1{
-  color: white;
-  background-color: black;
-  font-size: 3.5vh;
-  display: inline;
-}
-.but2{
-  color: white;
-  background-color: black;
-  font-size: 3.5vh;
-  display: inline;
-}
-*/
 ul{
-  list-style-type: none;
   margin: 0;
   padding: 0;
   width: 15%;
@@ -27,6 +7,7 @@ ul{
   height: 100%;
   overflow: auto;
 }
+
 li a{
   display: block;
   color: #000;
@@ -40,10 +21,6 @@ li a:hover:not(.active) {
 li a.active {
   background-color: #4CAF50;
   color:  white;
-}
-
-.content {
-  overflow: hidden;
 }
 
 .picked { 

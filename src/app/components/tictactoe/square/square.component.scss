@@ -5,10 +5,10 @@ button{
   font-weight: 600;
   background-color: aqua;
   filter: brightness(1);
-  transition: 2s;
+  transition: 1s;
 }
 button:hover{
-  filter: brightness(3);
+  filter: brightness(2);
 }
 .red{
   background-color: red;
