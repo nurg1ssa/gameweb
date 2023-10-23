@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mingames": {
+    "gameweb": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mingames",
+            "outputPath": "dist/gameweb",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mingames:build"
+            "browserTarget": "gameweb:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mingames:build:production"
+              "browserTarget": "gameweb:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mingames:build"
+            "browserTarget": "gameweb:build"
           }
         },
         "test": {
@@ -119,16 +119,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mingames:serve"
+            "devServerTarget": "gameweb:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mingames:serve:production"
+              "devServerTarget": "gameweb:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "mingames"
+  "defaultProject": "gameweb"
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import  { Router, NavigationEnd } from '@angular/router';
 
 
@@ -14,11 +14,10 @@ export class MainComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         // Update the currentRoute variable with the current route
         this.currentRoute = event.url;
-        console.log('Current Route:', this.currentRoute);
       }
     });
-   }
-
+   } 
+   
   ngOnInit(): void {
   }
   tictac(){
