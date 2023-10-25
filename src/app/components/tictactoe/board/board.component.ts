@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {element} from "protractor";
+import { element } from "protractor";
 
 @Component({
   selector: 'app-board',
@@ -12,25 +12,25 @@ export class BoardComponent implements OnInit {
   winner!: string;
   constructor() { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.newGame();
   }
-  newGame(){
+  newGame() {
     this.squares = Array(9).fill(null);
     this.winner = '';
     this.xIsNext = true;
   }
-  get player(){
+  get player() {
     return this.xIsNext ? 'X' : 'O';
   }
-  makeMove(idx: number){
-    if(!this.squares[idx]){
-      this.squares.splice(idx, 1,this.player);
+  makeMove(idx: number) {
+    if (!this.squares[idx]) {
+      this.squares.splice(idx, 1, this.player);
       this.xIsNext = !this.xIsNext;
     }
     this.winner = this.calculateWinner();
   }
-  calculateWinner(){
+  calculateWinner() {
     const lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -39,19 +39,31 @@ export class BoardComponent implements OnInit {
       [1, 4, 7],
       [2, 5, 8],
       [0, 4, 8],
-      [2, 4, 6]
+      [2, 4, 6],
+      [0, 4, 2, 5, 8],
     ];
-    for (let i = 0; i < lines.length; i++){
-      const [a, b, c] = lines[i];
-      if (
-        this.squares[a] &&
-        this.squares[a] === this.squares[b] &&
-        this.squares[a] === this.squares[c]
-      ){
-        return this.squares[a];
+    for (let i = 0; i < lines.length; i++) {
+      const [a, b, c, d, e] = lines[i]
+      if (lines[i].length == 3) {
+        if (
+          this.squares[a] &&
+          this.squares[a] === this.squares[b] &&
+          this.squares[a] === this.squares[c]
+        ) {
+          return this.squares[a];
+        }
       }
-      else if(this.squares.every(element => element != null)){
-        return 'No one';
+      else if (lines[i].length == 5) {
+        if (this.squares[a] &&
+          this.squares[a] === this.squares[b] &&
+          this.squares[a] === this.squares[c] &&
+          this.squares[a] === this.squares[d] &&
+          this.squares[a] === this.squares[e]) {
+          return this.squares[a];
+        }
+        else if(this.squares.every(element => element != null)){
+          return 'No one';
+        }
       }
     }
     return null;
